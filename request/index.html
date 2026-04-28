@@ -15,73 +15,112 @@
         <p style="margin:0; color:#dbeafe; font-size:16px;">Our scheduling team may contact you by phone or SMS to confirm a convenient appointment time.</p>
       </div>
 
-      <form method="post" action="#" style="padding:30px; display:grid; gap:16px;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div>
-            <label for="req_first_name" style="display:block; font-weight:800; margin-bottom:6px;">First Name</label>
-            <input type="text" id="req_first_name" name="first_name" required autocomplete="given-name" style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px;" />
-          </div>
-          <div>
-            <label for="req_last_name" style="display:block; font-weight:800; margin-bottom:6px;">Last Name</label>
-            <input type="text" id="req_last_name" name="last_name" required autocomplete="family-name" style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px;" />
-          </div>
-        </div>
+     <form method="POST" action="https://formspree.io/f/mlgayorl" style="padding:30px; display:grid; gap:16px;">
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div>
-            <label for="req_phone" style="display:block; font-weight:800; margin-bottom:6px;">Phone Number</label>
-            <input type="tel" id="req_phone" name="phone" required autocomplete="tel" style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px;" />
-          </div>
-          <div>
-            <label for="req_email" style="display:block; font-weight:800; margin-bottom:6px;">Email Address</label>
-            <input type="email" id="req_email" name="email" autocomplete="email" style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px;" />
-          </div>
-        </div>
+  <!-- Hidden Fields -->
+  <input type="hidden" name="_subject" value="New Insurance Request - Victor Franchetti">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://victorfranchetti.com/thank-you/">
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div>
-            <label for="req_state" style="display:block; font-weight:800; margin-bottom:6px;">State</label>
-            <select id="req_state" name="state" required style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px; background:#fff;">
-              <option value="">Select</option>
-              <option value="CA">California</option>
-              <option value="GA">Georgia</option>
-              <option value="NC">North Carolina</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="WA">Washington</option>
-            </select>
-          </div>
-          <div>
-            <label for="req_interest" style="display:block; font-weight:800; margin-bottom:6px;">Interest</label>
-            <select id="req_interest" name="interest" required style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px; background:#fff;">
-              <option value="">Select</option>
-              <option value="mortgage_protection">Mortgage Protection</option>
-              <option value="life_insurance">Life Insurance</option>
-              <option value="final_expense">Final Expense</option>
-              <option value="general_consultation">General Consultation</option>
-            </select>
-          </div>
-        </div>
+  <!-- Name -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+    <div>
+      <label for="req_first_name" style="display:block; font-weight:800; margin-bottom:6px;">First Name</label>
+      <input type="text" id="req_first_name" name="first_name" required autocomplete="given-name"
+        style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px;">
+    </div>
+    <div>
+      <label for="req_last_name" style="display:block; font-weight:800; margin-bottom:6px;">Last Name</label>
+      <input type="text" id="req_last_name" name="last_name" required autocomplete="family-name"
+        style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px;">
+    </div>
+  </div>
 
-        <div>
-          <label for="req_notes" style="display:block; font-weight:800; margin-bottom:6px;">Notes - optional</label>
-          <textarea id="req_notes" name="notes" rows="4" placeholder="Share anything helpful before we contact you." style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; font-size:15px; resize:vertical;"></textarea>
-        </div>
+  <!-- Contact -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+    <div>
+      <label for="req_phone" style="display:block; font-weight:800; margin-bottom:6px;">Phone Number</label>
+      <input type="tel" id="req_phone" name="phone" required autocomplete="tel"
+        style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px;">
+    </div>
+    <div>
+      <label for="req_email" style="display:block; font-weight:800; margin-bottom:6px;">Email Address</label>
+      <input type="email" id="req_email" name="email" autocomplete="email"
+        style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px;">
+    </div>
+  </div>
 
-        <label for="req_sms_consent" style="display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.45; color:#667085;">
-          <input type="checkbox" id="req_sms_consent" name="sms_consent" required style="margin-top:4px;" />
-          <span>
-            I agree to be contacted by phone and SMS regarding my request, including appointment scheduling,
-            confirmations, reminders, and follow-up communication. Message and data rates may apply.
-            Message frequency may vary. Reply STOP to opt out or HELP for assistance.
-          </span>
-        </label>
+  <!-- State + Interest -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+    <div>
+      <label for="req_state" style="display:block; font-weight:800; margin-bottom:6px;">State</label>
+      <select id="req_state" name="state" required
+        style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; background:#fff;">
+        <option value="">Select</option>
+        <option value="CA">California</option>
+        <option value="GA">Georgia</option>
+        <option value="NC">North Carolina</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="WA">Washington</option>
+      </select>
+    </div>
 
-        <button type="submit" style="background:#c59a3d; color:#0d223d; border:none; border-radius:12px; padding:15px 18px; font-size:16px; font-weight:900; cursor:pointer;">Submit Request</button>
+    <div>
+      <label for="req_interest" style="display:block; font-weight:800; margin-bottom:6px;">Interest</label>
+      <select id="req_interest" name="interest" required
+        style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px; background:#fff;">
+        <option value="">Select</option>
+        <option value="mortgage_protection">Mortgage Protection</option>
+        <option value="life_insurance">Life Insurance</option>
+        <option value="final_expense">Final Expense</option>
+        <option value="iul_review">Indexed Universal Life (IUL) Review</option>
+        <option value="general_consultation">General Consultation</option>
+      </select>
+    </div>
+  </div>
 
-        <p style="font-size:12px; color:#667085; margin:0;">
-          Submitting this form does not require you to purchase insurance. Coverage availability and eligibility vary by state, carrier, product, underwriting, age, health, and individual circumstances.
-        </p>
-      </form>
+  <!-- Notes -->
+  <div>
+    <label for="req_notes" style="display:block; font-weight:800; margin-bottom:6px;">Notes - optional</label>
+    <textarea id="req_notes" name="notes" rows="4"
+      placeholder="Share anything helpful before we contact you."
+      style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px;"></textarea>
+  </div>
+
+  <!-- SMS Consent -->
+  <label for="req_sms_consent"
+    style="display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.45; color:#667085;">
+    <input type="checkbox" id="req_sms_consent" name="sms_consent" value="consented" required style="margin-top:4px;">
+    <span>
+      By checking this box, I consent to receive phone calls and SMS messages from Victor Franchetti Insurance Services
+      regarding my request, including appointment scheduling, confirmations, reminders, and follow-up communication.
+      Message and data rates may apply. Message frequency may vary. Reply STOP to opt out or HELP for assistance.
+    </span>
+  </label>
+
+  <!-- Policy Links -->
+  <p style="font-size:12px; color:#667085; margin:-8px 0 0;">
+    See our
+    <a href="/privacy/" target="_blank" style="color:#2367a2; font-weight:700;">Privacy Policy</a>
+    and
+    <a href="/terms/" target="_blank" style="color:#2367a2; font-weight:700;">Terms of Service</a>.
+  </p>
+
+  <!-- Submit -->
+  <button type="submit"
+    style="background:#c59a3d; color:#0d223d; border:none; border-radius:12px; padding:15px 18px; font-size:16px; font-weight:900; cursor:pointer;">
+    Submit Request
+  </button>
+
+  <!-- Disclosure -->
+  <p style="font-size:12px; color:#667085; margin:0;">
+    Submitting this form does not require you to purchase insurance. Coverage availability and eligibility vary by
+    state, carrier, product, underwriting, age, health, and individual circumstances.
+  </p>
+
+</form>
+
     </section>
   </main>
 </body>
