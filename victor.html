@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Victor Franchetti Insurance Services | Mortgage Protection & Life Insurance</title>
+  <meta name="description" content="Victor Franchetti Insurance Services helps homeowners and families review mortgage protection, life insurance, final expense, and indexed universal life insurance options. Licensed in CA, GA, NC, PA, and WA." />
+
+  <style>
+    :root {
+      --navy: #0d223d;
+      --navy-2: #14375f;
+      --blue: #2367a2;
+      --soft-blue: #eef6ff;
+      --gold: #c59a3d;
+      --gold-light: #f4e7c5;
+      --text: #1f2937;
+      --muted: #667085;
+      --white: #ffffff;
+      --border: #d8e1ec;
+      --bg: #f6f8fb;
+      --green: #147a53;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      background: var(--navy);
+      color: #dbeafe;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .topbar-inner,
+    .nav-inner,
+    .container,
+    .hero-inner,
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: -0.4px;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-top: -3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #344054;
+      font-size: 15px;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-weight: 900;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(197, 154, 61, 0.25), transparent 28%),
+        linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 55%, #0b1a2e 100%);
+      color: var(--white);
+      padding: 76px 20px 56px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #f8fafc;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.04;
+      letter-spacing: -1.6px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      font-size: 18px;
+      max-width: 660px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary { background: var(--gold); color: var(--navy); }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+      filter: brightness(0.97);
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 720px;
+    }
+
+    .trust-pill {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .trust-pill strong {
+      display: block;
+      color: var(--white);
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .trust-pill span {
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    .hero-card {
+      background: var(--white);
+      color: var(--text);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+
+    .hero-card h2 {
+      color: var(--navy);
+      font-size: 28px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .quick-list {
+      list-style: none;
+      margin: 18px 0 22px;
+    }
+
+    .quick-list li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #344054;
+      font-size: 15px;
+    }
+
+    .quick-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .full-btn { width: 100%; }
+
+    .section { padding: 72px 20px; }
+    .section-alt { background: var(--white); }
+
+    .section-title {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 42px;
+    }
+
+    .section-title h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(16, 35, 63, 0.06);
+    }
+
+    .section-alt .info-card { background: #fbfdff; }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .info-card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .feature-panel {
+      background: linear-gradient(135deg, var(--soft-blue), #ffffff);
+      border: 1px solid #d6eaff;
+      border-radius: 22px;
+      padding: 34px;
+    }
+
+    .feature-panel h2,
+    .content-block h2 {
+      color: var(--navy);
+      font-size: 36px;
+      line-height: 1.12;
+      letter-spacing: -0.7px;
+      margin-bottom: 14px;
+    }
+
+    .feature-panel p,
+    .content-block p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: #344054;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .states {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .state-pill {
+      background: var(--gold-light);
+      color: #533f09;
+      border: 1px solid #ead18c;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .faq-item h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .cta-band {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 38px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-band h2 {
+      font-size: 32px;
+      line-height: 1.14;
+      margin-bottom: 8px;
+    }
+
+    .cta-band p { color: #cbd5e1; }
+
+    .disclosure {
+      background: #fbfdff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 34px 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .footer {
+      background: #07182b;
+      color: #dbeafe;
+      padding: 38px 20px;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer strong { color: var(--white); }
+
+    @media (max-width: 1050px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .split,
+      .trust-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding: 52px 20px 38px; }
+      .navbar { position: static; }
+      .nav-links { width: 100%; }
+    }
+
+    @media (max-width: 620px) {
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar,
+      .navbar,
+      .hero,
+      .section,
+      .disclosure,
+      .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div>Licensed insurance appointment support in CA, GA, NC, PA, and WA</div>
+      <div>
+        Email: <a href="mailto:victor@converzon.com">victor@converzon.com</a>
+        &nbsp; | &nbsp;
+        Phone: <a href="tel:+14153554289">(415) 355-4289</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Victor Franchetti Insurance Services home">
+        Victor Franchetti
+        <small>Insurance Services</small>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#coverage">Coverage Options</a>
+        <a href="#process">How It Works</a>
+        <a href="#licensed">Licensed States</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="/request-information/">Request a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">
+            Mortgage Protection • Life Insurance • Final Expense • IUL Reviews
+          </div>
+
+          <h1>Protect your family, your home, and the people depending on you.</h1>
+
+          <p>
+            Victor Franchetti Insurance Services helps homeowners and families schedule simple phone consultations
+            to review mortgage protection, life insurance, final expense, and indexed universal life insurance options.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/request-information/">Request Information</a>
+            <a class="btn btn-secondary" href="tel:+14153554289">Call (415) 355-4289</a>
+          </div>
+
+          <div class="trust-row" aria-label="Trust indicators">
+            <div class="trust-pill">
+              <strong>Licensed Support</strong>
+              <span>Serving CA, GA, NC, PA, WA</span>
+            </div>
+
+            <div class="trust-pill">
+              <strong>Appointment-Based</strong>
+              <span>No-pressure phone consultations</span>
+            </div>
+
+            <div class="trust-pill">
+              <strong>Clear Communication</strong>
+              <span>Calls and SMS confirmations</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Insurance consultation summary">
+          <h2>Professional insurance consultations by appointment</h2>
+
+          <p>
+            Our team helps homeowners and families schedule a focused phone consultation to review insurance options,
+            ask questions, and understand what may fit their needs.
+          </p>
+
+          <ul class="quick-list">
+            <li>Mortgage protection and life insurance options</li>
+            <li>Indexed universal life insurance reviews when appropriate</li>
+            <li>Clear appointment scheduling and reminders</li>
+            <li>Licensed support in CA, GA, NC, PA, and WA</li>
+            <li>No obligation to purchase coverage</li>
+          </ul>
+
+          <div style="background: var(--soft-blue); border: 1px solid #d6eaff; border-radius: 16px; padding: 18px; margin-top: 20px;">
+            <strong style="display:block; color: var(--navy); margin-bottom: 6px;">
+              Need to schedule a call?
+            </strong>
+
+            <p style="margin: 0 0 14px; color: var(--muted); font-size: 14px;">
+              Use the appointment request page and our scheduling team may follow up by phone or SMS to confirm a time.
+            </p>
+
+            <a class="btn btn-primary full-btn" href="/request-information/">Request Information</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="coverage" class="section section-alt">
+      <div class="container">
+        <div class="section-title">
+          <h2>Insurance options built around real-life protection</h2>
+          <p>
+            The goal is simple: help you understand your options before you choose a policy or decide whether coverage makes sense.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="info-card">
+            <div class="icon">⌂</div>
+            <h3>Mortgage Protection</h3>
+            <p>
+              Coverage designed to help protect the home and family if a homeowner becomes seriously ill, disabled, or passes away.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">♡</div>
+            <h3>Life Insurance</h3>
+            <p>
+              Review coverage options that may help provide financial protection for loved ones, income replacement, or future needs.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">$</div>
+            <h3>IUL Reviews</h3>
+            <p>
+              Learn about indexed universal life insurance options that may combine life insurance protection with potential cash value accumulation.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">✓</div>
+            <h3>Final Expense</h3>
+            <p>
+              Learn about options intended to help reduce the burden of funeral, burial, and end-of-life expenses for family members.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container split">
+        <div class="feature-panel">
+          <h2>A simple process without pressure.</h2>
+
+          <p>
+            Our appointment process is built to be straightforward. You request information, our scheduling team confirms a time,
+            and you speak with a licensed professional about your options.
+          </p>
+
+          <ul class="checklist">
+            <li>Submit your request or speak directly with our scheduling team.</li>
+            <li>Choose a phone appointment time that works for you.</li>
+            <li>Receive a confirmation or reminder by SMS when appropriate.</li>
+            <li>Review options and ask questions before deciding anything.</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Why families request a review</h2>
+
+          <p>
+            Many homeowners want to know what would happen to the mortgage, monthly bills, or family income if something unexpected happened.
+            A short consultation can help clarify available protection options.
+          </p>
+
+          <p>
+            Some families also want to understand whether permanent life insurance or indexed universal life insurance may fit longer-term
+            goals. These products are not right for everyone, so the review is designed to explain options, tradeoffs, costs, and eligibility
+            in plain language.
+          </p>
+
+          <p>
+            There is no obligation to purchase coverage. Availability and eligibility depend on state, carrier, product, age, health,
+            underwriting, and individual circumstances.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="licensed" class="section section-alt">
+      <div class="container split">
+        <div class="content-block">
+          <h2>Licensed in multiple states</h2>
+
+          <p>
+            Victor Franchetti Insurance Services currently supports insurance appointment requests for individuals in the following states.
+          </p>
+
+          <div class="states" aria-label="Licensed states">
+            <span class="state-pill">California</span>
+            <span class="state-pill">Georgia</span>
+            <span class="state-pill">North Carolina</span>
+            <span class="state-pill">Pennsylvania</span>
+            <span class="state-pill">Washington</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">i</div>
+          <h3>Appointment communication</h3>
+          <p>
+            If you request information, our scheduling team may follow up by phone or SMS to schedule, confirm, or remind you about an appointment.
+            Text messaging is used for appointment-related communication, not bulk marketing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Common questions</h2>
+          <p>Helpful answers before you schedule a consultation.</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h3>Is there a cost to request information?</h3>
+            <p>
+              No. Requesting information or scheduling a phone consultation does not require you to purchase insurance.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Why would I receive a text message?</h3>
+            <p>
+              SMS may be used to schedule, confirm, remind, or follow up about an appointment related to your request.
+              You can reply STOP at any time to opt out.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What happens during the consultation?</h3>
+            <p>
+              You can review your goals, ask questions, and learn what insurance options may be available based on your state and circumstances.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What is an indexed universal life insurance review?</h3>
+            <p>
+              An IUL review is a conversation about whether indexed universal life insurance may fit your goals. These policies can include
+              life insurance protection and potential cash value growth, but they are not appropriate for everyone and may involve fees,
+              caps, limits, and underwriting requirements.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Am I guaranteed coverage?</h3>
+            <p>
+              No. Coverage availability, rates, and eligibility may depend on carrier guidelines, state availability, underwriting,
+              age, health, and other factors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Ready to review your options?</h2>
+            <p>
+              Visit the appointment request page and our scheduling team may follow up to confirm a convenient time.
+            </p>
+          </div>
+
+          <a class="btn btn-primary" href="/request-information/">Request Information</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="disclosure">
+      <div class="container">
+        <p>
+          <strong>SMS Disclosure:</strong> By submitting your information, you consent to receive phone calls and SMS messages from
+          Victor Franchetti Insurance Services and its scheduling team regarding your request, appointment scheduling,
+          appointment confirmations, reminders, and follow-up communication. Message and data rates may apply. Message frequency
+          may vary. Reply STOP to opt out. Reply HELP for assistance.
+        </p>
+
+        <br />
+
+        <p>
+          <strong>Insurance Disclosure:</strong> Submitting a request does not require you to purchase insurance or enroll in coverage.
+          Coverage options, availability, rates, cash value features, index crediting methods, caps, participation rates, fees, and eligibility
+          may vary by insurance carrier, product, state, underwriting, age, health, and individual circumstances. Indexed universal life insurance
+          is not an investment in the stock market and does not directly participate in any index. This website is for appointment requests and
+          general informational purposes only.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Victor Franchetti Insurance Services</strong><br />
+        Licensed appointment support in CA, GA, NC, PA, and WA<br />
+        National License Number:<br />
+        Email: <a href="mailto:victor@converzon.com">victor@converzon.com</a><br />
+        Phone: <a href="tel:+14153554289">(415) 355-4289</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="/request-information/">Request Information</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
