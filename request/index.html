@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Request Information | Victor Franchetti Insurance Services</title>
   <meta name="description" content="Request an insurance consultation with Victor Franchetti Insurance Services. Licensed support in CA, GA, NC, PA, and WA." />
+  <style>
+        .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
 </head>
 <body>
   <main style="font-family: Arial, Helvetica, sans-serif; background:#f6f8fb; min-height:100vh; padding:40px 20px; color:#1f2937;">
@@ -24,7 +37,7 @@
   <input type="hidden" name="_next" value="https://victorfranchetti.com/thank-you/">
 
   <!-- Name -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+ <div class="form-row">
     <div>
       <label for="req_first_name" style="display:block; font-weight:800; margin-bottom:6px;">First Name</label>
       <input type="text" id="req_first_name" name="first_name" required autocomplete="given-name"
@@ -38,7 +51,7 @@
   </div>
 
   <!-- Contact -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+  <div class="form-row">
     <div>
       <label for="req_phone" style="display:block; font-weight:800; margin-bottom:6px;">Phone Number</label>
       <input type="tel" id="req_phone" name="phone" required autocomplete="tel"
@@ -52,7 +65,7 @@
   </div>
 
   <!-- State + Interest -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+ <div class="form-row">
     <div>
       <label for="req_state" style="display:block; font-weight:800; margin-bottom:6px;">State</label>
       <select id="req_state" name="state" required
