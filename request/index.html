@@ -36,7 +36,7 @@
       <div style="background:#0d223d; color:#fff; padding:34px;">
         <p style="margin:0 0 8px; color:#f4e7c5; font-weight:800; text-transform:uppercase; letter-spacing:.7px; font-size:13px;">Appointment Request</p>
         <h1 style="margin:0 0 12px; font-size:34px; line-height:1.1;">Request insurance information</h1>
-        <p style="margin:0; color:#dbeafe; font-size:16px;">Our scheduling team may contact you by phone or SMS to confirm a convenient appointment time.</p>
+        <p style="margin:0; color:#dbeafe; font-size:16px;">Our office may contact you by phone or SMS to confirm a convenient appointment time.</p>
       </div>
 
      <form method="POST" action="https://formspree.io/f/mlgayorl" style="padding:30px; display:grid; gap:16px;">
@@ -112,24 +112,30 @@
       style="width:100%; padding:12px; border:1px solid #d8e1ec; border-radius:10px;"></textarea>
   </div>
 
-  <!-- SMS Consent -->
+ <!-- SMS Consent -->
+<div style="font-size:13px; line-height:1.45; color:#667085;">
   <label for="req_sms_consent"
-    style="display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.45; color:#667085;">
+    style="display:flex; gap:10px; align-items:flex-start;">
     <input type="checkbox" id="req_sms_consent" name="sms_consent" value="consented" required style="margin-top:4px;">
     <span>
-      By checking this box, I consent to receive phone calls and SMS messages from Victor Franchetti Insurance Services
-      regarding my request, including appointment scheduling, confirmations, reminders, and follow-up communication.
-      Message and data rates may apply. Message frequency may vary. Reply STOP to opt out or HELP for assistance.
+      By checking this box, I agree to receive SMS text messages from Victor Franchetti Insurance Services regarding my request, including appointment
+      scheduling, appointment confirmations, reminders, and follow-up communication. Message frequency may vary.
+      Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance.
     </span>
   </label>
 
-  <!-- Policy Links -->
-  <p style="font-size:12px; color:#667085; margin:-8px 0 0;">
-    See our
-    <a href="/privacy/" target="_blank" style="color:#2367a2; font-weight:700;">Privacy Policy</a>
-    and
-    <a href="/terms/" target="_blank" style="color:#2367a2; font-weight:700;">Terms of Service</a>.
+  <p style="font-size:12px; color:#667085; margin:8px 0 0 26px;">
+    SMS consent is not required to request information or purchase insurance.
   </p>
+</div>
+
+<!-- Policy Links -->
+<p style="font-size:12px; color:#667085; margin:-8px 0 0;">
+  See our
+  <a href="/privacy/" target="_blank" style="color:#2367a2; font-weight:700;">Privacy Policy</a>,
+  <a href="/terms/" target="_blank" style="color:#2367a2; font-weight:700;">Terms of Service</a>, and
+  <a href="/sms/" target="_blank" style="color:#2367a2; font-weight:700;">SMS Communication Policy</a>.
+</p>
 
   <!-- Submit -->
   <button type="submit"
