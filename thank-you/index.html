@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Requested | Victor Franchetti Insurance Services</title>
+
+  <style>
+    :root{
+      --navy:#0a213b;
+      --navy2:#12385f;
+      --gold:#c8a24d;
+      --gold-soft:#f2df9b;
+      --white:#ffffff;
+      --muted:rgba(255,255,255,.76);
+      --line:rgba(255,255,255,.16);
+      --green:#22c55e;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(200,162,77,.25), transparent 34%),
+        linear-gradient(145deg,var(--navy),var(--navy2));
+      color:var(--white);
+    }
+
+    .page{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:26px;
+    }
+
+    .wrap{
+      width:min(720px,100%);
+      text-align:center;
+    }
+
+    .brand{
+      font-weight:900;
+      letter-spacing:-.2px;
+      margin-bottom:30px;
+      color:rgba(255,255,255,.92);
+    }
+
+    .seal{
+      width:76px;
+      height:76px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      margin:0 auto 22px;
+      background:rgba(255,255,255,.12);
+      border:1px solid var(--line);
+      color:var(--gold-soft);
+      font-size:34px;
+      font-weight:950;
+      box-shadow:0 20px 50px rgba(0,0,0,.22);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.35);
+      color:#dcfce7;
+      font-weight:850;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(36px,7vw,58px);
+      line-height:1.04;
+      letter-spacing:-2px;
+    }
+
+    .sub{
+      max-width:580px;
+      margin:18px auto 28px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.55;
+    }
+
+    .card{
+      background:rgba(255,255,255,.96);
+      color:#1f2937;
+      border-radius:26px;
+      padding:28px;
+      box-shadow:0 25px 70px rgba(0,0,0,.24);
+      text-align:left;
+      margin-top:28px;
+    }
+
+    .card h2{
+      color:var(--navy);
+      margin:0 0 16px;
+      font-size:23px;
+      letter-spacing:-.4px;
+    }
+
+    .next{
+      display:grid;
+      gap:12px;
+    }
+
+    .item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      background:#fbfcff;
+    }
+
+    .check{
+      width:26px;
+      height:26px;
+      border-radius:999px;
+      background:#e8f8ee;
+      color:#15803d;
+      display:grid;
+      place-items:center;
+      font-weight:950;
+      flex:0 0 auto;
+    }
+
+    .item b{
+      display:block;
+      color:var(--navy);
+      margin-bottom:2px;
+    }
+
+    .item span{
+      display:block;
+      color:#64748b;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    .phone-box{
+      margin-top:18px;
+      padding:18px;
+      border-radius:18px;
+      background:#f8fafc;
+      border:1px solid #e5e7eb;
+      text-align:center;
+    }
+
+    .phone-box small{
+      display:block;
+      color:#64748b;
+      font-weight:750;
+      margin-bottom:4px;
+    }
+
+    .phone-box b{
+      color:var(--navy);
+      font-size:24px;
+      letter-spacing:-.4px;
+    }
+
+    .note{
+      margin:20px auto 0;
+      max-width:590px;
+      color:rgba(255,255,255,.72);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .footer{
+      margin-top:24px;
+      color:rgba(255,255,255,.58);
+      font-size:12.5px;
+      line-height:1.5;
+    }
+
+    @media(max-width:620px){
+      .page{
+        align-items:start;
+        padding:22px 16px;
+      }
+
+      .brand{
+        margin-bottom:22px;
+        font-size:14px;
+      }
+
+      .seal{
+        width:66px;
+        height:66px;
+        font-size:30px;
+        margin-bottom:18px;
+      }
+
+      h1{
+        font-size:36px;
+        letter-spacing:-1.4px;
+      }
+
+      .sub{
+        font-size:16px;
+        margin-bottom:20px;
+      }
+
+      .card{
+        padding:20px;
+        border-radius:22px;
+        margin-top:22px;
+      }
+
+      .item{
+        padding:13px;
+      }
+
+      .phone-box b{
+        font-size:21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="wrap">
+
+      <div class="brand">Victor Franchetti Insurance Services</div>
+
+      <div class="seal">✓</div>
+
+      <div class="badge">Review Request Received</div>
+
+      <h1>Your review has been requested.</h1>
+
+      <p class="sub">
+        Thank you for requesting your complimentary Life Insurance Review.
+        We’ll review your information and contact you shortly.
+      </p>
+
+      <section class="card">
+        <h2>What happens next</h2>
+
+        <div class="next">
+          <div class="item">
+            <div class="check">✓</div>
+            <div>
+              <b>We review your request</b>
+              <span>We look at the focus you selected so the conversation is tailored to your goals.</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="check">✓</div>
+            <div>
+              <b>We contact you</b>
+              <span>A licensed representative may reach out by call, text, or email.</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="check">✓</div>
+            <div>
+              <b>You decide what makes sense</b>
+              <span>There is no cost, no obligation, and this is not an application for insurance.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-box">
+          <small>Questions or need immediate assistance?</small>
+          <b>(415)355-4289</b>
+        </div>
+      </section>
+
+      <p class="note">
+        Please keep an eye on your phone. Sometimes calls are labeled as spam or filtered by mobile carriers.
+      </p>
+
+      <div class="footer">
+        Licensed Independent Agent · NPN 22147350<br>
+        This page confirms a request for a review only. It is not an application for insurance.
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
