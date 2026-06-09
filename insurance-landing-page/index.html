@@ -262,12 +262,12 @@ window.addEventListener('load', function () {
         <div class="split">
           <div class="field">
             <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+           <input id="phone" name="phone" type="tel">
           </div>
 
           <div class="field">
             <label for="email">Email address</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+           <input id="email" name="email" type="email">
           </div>
         </div>
 
@@ -376,12 +376,29 @@ window.addEventListener('load', function () {
     });
 
     if (reviewForm) {
-        reviewForm.addEventListener('submit', function () {
+
+    reviewForm.addEventListener('submit', function (e) {
+
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        if (!phone && !email) {
+            e.preventDefault();
+
+            alert(
+                "Please provide either a phone number or an email address so we can contact you about your complimentary review."
+            );
+
+            return;
+        }
+
         trackClarityEvent('Submitted Review', {
             funnel_step: 'submitted'
         });
-        });
-    }
+
+    });
+
+}
 
     const params = new URLSearchParams(window.location.search);
 
