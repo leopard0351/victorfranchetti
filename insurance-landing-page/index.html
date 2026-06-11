@@ -4,703 +4,397 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Free Life Insurance Review | Victor Franchetti Insurance Services</title>
-  <meta name="description" content="Request a complimentary life insurance review with Victor Franchetti Insurance Services. Licensed independent guidance, no cost, no obligation, and your information is never sold." />
+  <title>Coverage Assessment | Victor Franchetti Insurance Services</title>
+  <meta name="description" content="Complete a brief coverage assessment with Victor Franchetti Insurance Services." />
 
   <style>
     :root{
-      --navy:#0a213b;
-      --navy2:#12365d;
-      --gold:#c8a24d;
-      --gold-soft:#f4ead2;
-      --ink:#182235;
+      --bg:#ffffff;
+      --ink:#101828;
+      --text:#1f2937;
       --muted:#667085;
-      --line:#e4e9f0;
-      --soft:#f7f9fc;
-      --white:#ffffff;
+      --quiet:#98a2b3;
+      --line:#e5e7eb;
+      --soft:#f8fafc;
+      --blue:#123a63;
+      --blue2:#175c9e;
+      --blue-soft:#eef6ff;
+      --focus:rgba(23,92,158,.14);
       --green:#13745b;
-      --shadow:0 28px 80px rgba(10,33,59,.17);
+      --danger:#b42318;
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
+
+    html,body{
       margin:0;
-      min-height:100vh;
+      min-height:100%;
+      background:#fff;
       color:var(--ink);
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at 15% 10%, rgba(200,162,77,.15), transparent 27%),
-        radial-gradient(circle at 85% 85%, rgba(18,54,93,.10), transparent 30%),
-        linear-gradient(180deg,#fbfcfe,#f1f5f9);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    body{
+      overflow-x:hidden;
     }
 
     .page{
       min-height:100vh;
+      background:#fff;
       display:flex;
-      align-items:center;
       justify-content:center;
-      padding:28px;
     }
 
-    .shell{
-      width:min(1160px,100%);
-      min-height:750px;
-      background:rgba(255,255,255,.98);
-      border:1px solid rgba(10,33,59,.08);
-      border-radius:34px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:.86fr 1.14fr;
+    .wrap{
+      width:100%;
+      max-width:520px;
+      padding:18px 18px 24px;
     }
 
-    .visual{
-      position:relative;
-      min-height:750px;
-      background:var(--navy);
-      overflow:hidden;
-      color:#fff;
-      cursor:pointer;
-    }
-
-    .visual:before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:url("../assets/img/family.jpg") center/cover no-repeat;
-      opacity:.92;
-      filter:saturate(1.02) contrast(1.02);
-    }
-
-    .visual:after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(180deg,rgba(10,33,59,.07),rgba(10,33,59,.28) 45%,rgba(10,33,59,.94)),
-        linear-gradient(90deg,rgba(10,33,59,.38),transparent 58%);
-    }
-
-    .brand{
-      position:absolute;
-      z-index:2;
-      top:25px;
-      left:28px;
-      right:28px;
+    .top{
       display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:900;
-      letter-spacing:-.15px;
-    }
-
-    .seal{
-      width:42px;
-      height:42px;
-      border-radius:999px;
-      display:grid;
-      place-items:center;
-      color:var(--gold-soft);
-      background:rgba(255,255,255,.13);
-      border:1px solid rgba(255,255,255,.25);
-      backdrop-filter:blur(8px);
-    }
-
-    .brand small{
-      display:block;
-      margin-top:1px;
-      font-size:12px;
-      font-weight:650;
-      color:rgba(255,255,255,.78);
-    }
-
-    .visual-content{
-      position:absolute;
-      z-index:2;
-      left:34px;
-      right:34px;
-      bottom:32px;
-    }
-
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border:1px solid rgba(255,255,255,.22);
-      background:rgba(255,255,255,.12);
-      border-radius:999px;
-      font-size:13px;
-      font-weight:800;
-      margin-bottom:16px;
-      backdrop-filter:blur(8px);
-    }
-
-    .visual h1{
-      font-size:clamp(38px,4.4vw,60px);
-      line-height:1.02;
-      letter-spacing:-2px;
-      margin:0 0 13px;
-    }
-
-    .visual p{
-      margin:0;
-      max-width:555px;
-      font-size:18px;
-      line-height:1.55;
-      color:rgba(255,255,255,.88);
-    }
-
-    .hero-cta{
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      margin-top:22px;
-      min-width:245px;
-      border:none;
-      border-radius:16px;
-      padding:16px 22px;
-      background:var(--gold);
-      color:#101828;
-      font-size:16px;
-      font-weight:950;
-      cursor:pointer;
-      box-shadow:0 14px 34px rgba(0,0,0,.22);
-    }
-
-    .hero-cta:hover{
-      filter:brightness(1.04);
-      transform:translateY(-1px);
-    }
-
-    .trust-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin-top:23px;
-    }
-
-    .trust-chip{
-      border:1px solid rgba(255,255,255,.17);
-      background:rgba(255,255,255,.12);
-      border-radius:15px;
-      padding:12px 13px;
-      font-size:13px;
-      color:rgba(255,255,255,.82);
-      backdrop-filter:blur(10px);
-    }
-
-    .trust-chip b{
-      display:block;
-      color:#fff;
-      font-size:14px;
-      margin-bottom:2px;
-    }
-
-    .mobile-hero-chips{
-      display:none;
-    }
-
-    .panel{
-      min-height:750px;
-      padding:32px 34px;
-      display:flex;
-      flex-direction:column;
-    }
-
-    .panel-head{
-      display:flex;
-      justify-content:space-between;
       align-items:flex-start;
-      gap:18px;
-      margin-bottom:21px;
-    }
-
-    .panel-title{
-      font-size:15px;
-      font-weight:950;
-      color:var(--navy);
-      letter-spacing:-.1px;
-    }
-
-    .panel-sub{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:2px;
-    }
-
-    .contact{
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.35;
-      text-align:right;
-    }
-
-    .contact b{color:var(--navy)}
-
-    .small-mobile-trust{
-      display:none;
-    }
-
-    .progress-meta{
-      display:flex;
       justify-content:space-between;
+      gap:12px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:16px;
+    }
+
+    .agency{
+      color:#344054;
+      font-size:13px;
+      font-weight:760;
+      line-height:1.25;
+    }
+
+    .agency span{
+      display:block;
+      margin-top:2px;
+      color:var(--quiet);
+      font-size:11.5px;
+      font-weight:650;
+    }
+
+    .badge{
+      flex:0 0 auto;
+      display:inline-flex;
       align-items:center;
+      gap:6px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 9px;
+      background:#fff;
+      color:#475467;
+      font-size:11.5px;
+      font-weight:750;
+    }
+
+    .badge-dot{
+      width:7px;
+      height:7px;
+      border-radius:999px;
+      background:var(--green);
+    }
+
+    .step-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+    }
+
+    .step-label{
       color:var(--muted);
       font-size:12px;
       font-weight:800;
-      margin-bottom:8px;
     }
 
-    .progress{
+    .dots{
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+
+    .dot{
+      width:7px;
       height:7px;
-      background:#edf1f6;
       border-radius:999px;
-      overflow:hidden;
-      margin-bottom:24px;
+      background:#d0d5dd;
+      transition:.16s ease;
     }
 
-    .bar{
-      height:100%;
-      width:50%;
-      background:linear-gradient(90deg,var(--gold),#ead58f);
-      border-radius:999px;
-      transition:.25s ease;
+    .dot.active{
+      width:18px;
+      background:var(--blue);
     }
 
     form{
-      display:flex;
-      flex-direction:column;
-      flex:1;
+      width:100%;
+    }
+
+    .error{
+      display:none;
+      margin:0 0 14px;
+      padding:10px 12px;
+      border:1px solid #fecdca;
+      border-radius:10px;
+      background:#fffbfa;
+      color:var(--danger);
+      font-size:13px;
+      font-weight:650;
+      line-height:1.35;
+    }
+
+    .error.show{
+      display:block;
     }
 
     .step{
       display:none;
-      animation:fade .2s ease;
+      animation:fade .14s ease;
     }
 
-    .step.active{display:block}
+    .step.active{
+      display:block;
+    }
 
     @keyframes fade{
-      from{opacity:.35;transform:translateY(5px)}
-      to{opacity:1;transform:translateY(0)}
+      from{opacity:.42; transform:translateY(4px)}
+      to{opacity:1; transform:translateY(0)}
     }
 
-    .eyebrow{
-      font-size:12px;
-      font-weight:950;
-      color:var(--gold);
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:9px;
+    h1{
+      margin:0 0 8px;
+      color:var(--ink);
+      font-size:31px;
+      line-height:1.06;
+      letter-spacing:-.045em;
+      font-weight:820;
     }
 
-    .step h2{
-      font-size:clamp(29px,3vw,38px);
-      letter-spacing:-1px;
-      line-height:1.08;
-      color:var(--navy);
-      margin:0 0 10px;
-    }
-
-    .lead{
-      max-width:650px;
-      margin:0 0 22px;
+    .sub{
+      margin:0 0 18px;
       color:var(--muted);
-      font-size:16.5px;
-      line-height:1.55;
+      font-size:14.5px;
+      line-height:1.45;
     }
 
-    .option-list{
+    .options{
       display:grid;
-      gap:11px;
+      gap:10px;
     }
 
     .choice{
       position:relative;
-      display:block;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      width:100%;
+      min-height:58px;
+      padding:14px;
       border:1px solid var(--line);
-      border-radius:18px;
+      border-radius:12px;
       background:#fff;
-      padding:16px 16px 16px 52px;
       cursor:pointer;
-      box-shadow:0 7px 20px rgba(15,36,63,.035);
-      transition:.16s ease;
+      transition:.14s ease;
     }
 
     .choice:hover{
-      border-color:#c9d2df;
-      transform:translateY(-1px);
+      border-color:#bfccd9;
+      background:#fbfdff;
     }
 
     .choice input{
       position:absolute;
       opacity:0;
+      pointer-events:none;
     }
 
-    .choice:before{
-      content:"";
-      position:absolute;
-      left:18px;
-      top:19px;
-      width:18px;
-      height:18px;
-      border-radius:50%;
+    .radio{
+      width:20px;
+      height:20px;
       border:2px solid #cbd5e1;
+      border-radius:50%;
       background:#fff;
+      flex:0 0 auto;
+      transition:.14s ease;
     }
 
-    .choice:has(input:checked){
-      border-color:var(--gold);
-      background:#fffcf5;
-      box-shadow:0 12px 30px rgba(200,162,77,.16);
-    }
-
-    .choice:has(input:checked):before{
-      border-color:var(--gold);
-      background:var(--gold);
-      box-shadow:inset 0 0 0 4px #fff;
+    .choice-text{
+      display:block;
+      min-width:0;
     }
 
     .choice strong{
       display:block;
-      color:var(--navy);
-      font-size:16px;
+      color:#182230;
+      font-size:15.5px;
+      line-height:1.25;
+      font-weight:760;
     }
 
-    .choice span{
+    .choice small{
       display:block;
-      margin-top:3px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.42;
-    }
-
-    .trust-panel{
-      background:linear-gradient(180deg,#fbfcff,#fff);
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:21px;
-      margin:18px 0;
-    }
-
-    .trust-panel h3{
-      font-size:18px;
-      margin:0 0 12px;
-      color:var(--navy);
-    }
-
-    .checkline{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      margin:10px 0;
-      color:#334155;
-      font-size:15px;
-      line-height:1.45;
-    }
-
-    .checkline i{
-      font-style:normal;
-      color:var(--green);
-      font-weight:950;
-    }
-
-    .quote{
-      border-left:4px solid var(--gold);
-      padding-left:15px;
-      margin:18px 0 0;
-      color:#334155;
-      font-size:14.5px;
-      line-height:1.55;
-    }
-
-    .quote b{color:var(--navy)}
-
-    .license-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin-top:16px;
-    }
-
-    .license-item{
-      border:1px solid var(--line);
-      border-radius:15px;
-      background:#fff;
-      padding:12px;
-    }
-
-    .license-item small{
-      display:block;
-      color:var(--muted);
-      font-size:12px;
-    }
-
-    .license-item b{
-      display:block;
-      color:var(--navy);
-      font-size:14px;
       margin-top:2px;
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.3;
     }
 
-    .notice{
-      background:#f8fafc;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:17px;
-      color:#334155;
-      font-size:14.5px;
-      line-height:1.52;
-      margin:18px 0;
+    .choice:has(input:checked){
+      background:var(--blue-soft);
+      border-color:var(--blue2);
+      box-shadow:0 0 0 4px var(--focus);
     }
 
-    .notice b{color:var(--navy)}
+    .choice:has(input:checked) .radio{
+      border-color:var(--blue2);
+      background:var(--blue2);
+      box-shadow:inset 0 0 0 4px #fff;
+    }
 
     .fields{
       display:grid;
-      gap:13px;
+      gap:12px;
+      margin-top:14px;
     }
 
     .field label{
       display:block;
       margin-bottom:6px;
-      font-size:13px;
       color:#344054;
-      font-weight:850;
+      font-size:12.5px;
+      font-weight:750;
     }
 
     .field input,
     .field select{
       width:100%;
-      border:1px solid #cbd5e1;
-      border-radius:14px;
-      padding:15px 14px;
-      font-size:16px;
+      height:49px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:12px;
       background:#fff;
+      color:var(--ink);
+      font-size:16px;
       outline:none;
+      transition:border-color .14s ease, box-shadow .14s ease;
     }
 
     .field input:focus,
     .field select:focus{
-      border-color:var(--gold);
-      box-shadow:0 0 0 4px rgba(200,162,77,.16);
+      border-color:var(--blue2);
+      box-shadow:0 0 0 4px var(--focus);
     }
 
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:13px;
-    }
-
-    .disclaimer{
-      font-size:12px;
+    .mini-note{
+      margin:14px 0 0;
       color:var(--muted);
-      line-height:1.5;
-      margin:13px 0 0;
+      font-size:12.5px;
+      line-height:1.45;
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:11px;
+    }
+
+    .trust-line{
+      margin-top:12px;
+      display:grid;
+      gap:6px;
+      color:#475467;
+      font-size:12.5px;
+      line-height:1.35;
+    }
+
+    .trust-line div{
+      display:flex;
+      gap:7px;
+      align-items:flex-start;
+    }
+
+    .check{
+      color:var(--green);
+      font-weight:900;
     }
 
     .actions{
-      margin-top:auto;
-      padding-top:23px;
+      position:sticky;
+      bottom:0;
       display:flex;
-      gap:12px;
-      align-items:center;
+      gap:10px;
+      margin-top:20px;
+      padding:14px 0 0;
+      background:linear-gradient(180deg,rgba(255,255,255,.75),#fff 38%);
     }
 
     .btn{
+      appearance:none;
+      min-height:48px;
+      border-radius:10px;
       border:none;
-     padding:14px 18px;
-font-size:15px;
-font-weight:800;
-border-radius:12px;
-letter-spacing:.01em;
+      padding:12px 16px;
+      font-size:15.5px;
+      font-weight:780;
       cursor:pointer;
+      transition:.14s ease;
     }
 
     .btn-primary{
-      background:var(--navy);
-      color:#fff;
       flex:1;
+      background:var(--blue);
+      color:#fff;
     }
 
-    .btn-primary:hover{background:var(--navy2)}
+    .btn-primary:hover{
+      background:var(--blue2);
+    }
 
     .btn-secondary{
-      background:#eef2f7;
-      color:#334155;
+      flex:0 0 auto;
+      background:#fff;
+      color:#475467;
+      border:1px solid var(--line);
     }
 
+    .btn-secondary:hover{
+      background:#f8fafc;
+    }
 
-    .mobile-header{
-    display:none;
-}
+    .footer{
+      margin-top:18px;
+      padding-top:12px;
+      border-top:1px solid var(--line);
+      color:#98a2b3;
+      font-size:11px;
+      line-height:1.45;
+    }
 
-
-    @media(max-width:900px){
+    @media(min-width:720px){
       .page{
-        padding:0;
-        display:block;
+        align-items:center;
+        background:#f8fafc;
+        padding:30px;
       }
 
-      .mobile-header{
-    display:block;
-    margin-bottom:24px;
-}
-
-.mobile-brand{
-    font-size:24px;
-    font-weight:900;
-    color:var(--navy);
-    line-height:1.15;
-}
-
-.mobile-license{
-    margin-top:14px;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:.15em;
-    color:var(--gold);
-}
-
-.mobile-trust{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    margin-top:18px;
-}
-
-.mobile-trust div{
-    border:1px solid var(--line);
-    border-radius:12px;
-    background:#fff;
-    padding:12px;
-    font-size:14px;
-    font-weight:700;
-}
-
-      .shell{
-        display:block;
-        border-radius:0;
-        min-height:100vh;
-      }
-
-    .visual{
-    display:none;
-}
-
-      .brand{
-        top:18px;
-        left:18px;
-        right:18px;
-      }
-
-      .visual:after{
-        background:
-          linear-gradient(180deg,rgba(10,33,59,.18),rgba(10,33,59,.38) 38%,rgba(10,33,59,.96)),
-          linear-gradient(90deg,rgba(10,33,59,.35),transparent 60%);
-      }
-
-      .visual-content{
-        position:relative;
-        left:auto;
-        right:auto;
-        bottom:auto;
-        width:100%;
-        padding:0 20px 30px;
-      }
-
-      .kicker{
-        font-size:12px;
-        margin-bottom:13px;
-      }
-
-      .visual h1{
-        font-size:38px;
-        letter-spacing:-1.5px;
-        margin-bottom:12px;
-      }
-
-      .visual p{
-        font-size:16px;
-        line-height:1.45;
-      }
-
-      .hero-cta{
-        display:flex;
-        width:100%;
-        margin-top:20px;
-        padding:17px 18px;
-        font-size:17px;
-      }
-
-      .trust-grid{
-        display:none;
-      }
-
-      .mobile-hero-chips{
-        display:flex;
-        flex-wrap:wrap;
-        gap:8px;
-        margin-top:15px;
-      }
-
-      .mobile-hero-chips span{
-        border:1px solid rgba(255,255,255,.2);
-        background:rgba(255,255,255,.13);
-        color:rgba(255,255,255,.9);
-        border-radius:999px;
-        padding:8px 10px;
-        font-size:12px;
-        font-weight:800;
-        backdrop-filter:blur(8px);
-      }
-
-   .panel{
-    width:100%;
-    min-height:100vh;
-    padding:20px 18px 30px;
-}
-
-      .panel-head{
-        display:none;
-      }
-
-
-
-      .small-mobile-trust span{
-        white-space:nowrap;
-        border:1px solid var(--line);
+      .wrap{
         background:#fff;
-        border-radius:999px;
-        padding:8px 10px;
-        color:#475569;
-        font-size:12px;
+        border:1px solid var(--line);
+        border-radius:16px;
+        box-shadow:0 14px 38px rgba(16,24,40,.08);
+        padding:24px;
       }
 
-      .step h2{
-        font-size:28px;
-      }
-
-      .lead{
-        font-size:16px;
-      }
-
-      .split,
-      .license-grid{
-        grid-template-columns:1fr;
-      }
-
-      .choice{
-        padding-right:13px;
+      h1{
+        font-size:35px;
       }
 
       .actions{
-        position:sticky;
-        bottom:0;
-        background:linear-gradient(180deg,rgba(255,255,255,.70),#fff 36%);
-        padding-top:18px;
+        position:static;
+        background:#fff;
       }
     }
   </style>
@@ -719,7 +413,7 @@ letter-spacing:.01em;
   <script>
     window.addEventListener('load', function () {
       if (typeof clarity === "function") {
-        clarity("set", "page_type", "life_review");
+        clarity("set", "page_type", "coverage_amount_intake");
       }
     });
   </script>
@@ -727,467 +421,393 @@ letter-spacing:.01em;
 
 <body>
   <main class="page">
-    <div class="shell">
+    <div class="wrap">
 
-      <aside class="visual" id="heroArea">
-        <div class="brand">
-          <div class="seal">♥</div>
-          <div>
-            Victor Franchetti<br>
-            <small>Insurance Services</small>
-          </div>
+      <header class="top">
+        <div class="agency">
+          Victor Franchetti Insurance Services
+          <span>Independent Life Insurance</span>
         </div>
 
-        <div class="visual-content">
-          <div class="kicker">Complimentary Life Insurance Review</div>
-
-          <h1>Protect What Matters Most</h1>
-
-          <p>
-            Start a quick review with a licensed independent agent. No cost, no obligation,
-            and your information is never sold.
-          </p>
-
-          <button type="button" class="hero-cta" onclick="startReview(event)">
-            Start My Free Review
-          </button>
-
-          <div class="mobile-hero-chips">
-            <span>✓ Licensed Agent</span>
-            <span>✓ No Cost</span>
-            <span>✓ No Obligation</span>
-            <span>✓ Info Never Sold</span>
-          </div>
-
-          <div class="trust-grid">
-            <div class="trust-chip">
-              <b>Licensed Guidance</b>
-              Speak with an insurance professional
-            </div>
-            <div class="trust-chip">
-              <b>No Cost Review</b>
-              No obligation to apply
-            </div>
-            <div class="trust-chip">
-              <b>Multiple Options</b>
-              Term, whole life, mortgage protection
-            </div>
-            <div class="trust-chip">
-              <b>Privacy First</b>
-              Your information is never sold
-            </div>
-          </div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Intake
         </div>
-      </aside>
+      </header>
 
-      <section class="panel" id="formPanel">
-        <div class="panel-head">
-          <div>
-            <div class="panel-title">Start Your Review</div>
-            <div class="panel-sub">Three quick steps. No application today.</div>
+      <div class="step-row">
+        <div class="step-label" id="stepLabel">Question 1 of 4</div>
+        <div class="dots" aria-hidden="true">
+          <span class="dot active" data-dot="1"></span>
+          <span class="dot" data-dot="2"></span>
+          <span class="dot" data-dot="3"></span>
+          <span class="dot" data-dot="4"></span>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/mojzwenr" method="POST" id="assessmentForm">
+        <input type="hidden" name="source" value="VFIS Coverage Amount Intake" />
+        <input type="hidden" name="utm_source" id="utm_source" />
+        <input type="hidden" name="utm_campaign" id="utm_campaign" />
+        <input type="hidden" name="utm_content" id="utm_content" />
+        <input type="hidden" name="utm_medium" id="utm_medium" />
+        <input type="hidden" name="utm_id" id="utm_id" />
+        <input type="hidden" name="utm_term" id="utm_term" />
+
+        <div class="error" id="errorBox">Please select an option to continue.</div>
+
+        <section class="step active" data-step="1">
+          <h1>Coverage amount</h1>
+          <p class="sub">Select the amount of coverage you would like included in your review.</p>
+
+          <div class="options">
+            <label class="choice">
+              <input type="radio" name="coverage_amount" value="$25,000 - $50,000" required>
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$25,000 - $50,000</strong>
+                <small>Starter or final expense protection.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="coverage_amount" value="$50,000 - $100,000">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$50,000 - $100,000</strong>
+                <small>Common family protection amount.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="coverage_amount" value="$100,000 - $250,000">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$100,000 - $250,000</strong>
+                <small>Family or mortgage protection.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="coverage_amount" value="$250,000+">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$250,000+</strong>
+                <small>Larger protection or long-term planning.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="coverage_amount" value="Not sure">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Not sure</strong>
+                <small>A licensed review can help determine an appropriate amount.</small>
+              </span>
+            </label>
           </div>
 
-          <div class="contact">
-            Questions? <b>(415)335-4289</b><br>
-            Licensed Independent Agent
+          <div class="actions">
+            <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
           </div>
-        </div>
+        </section>
 
-  
+        <section class="step" data-step="2">
+          <h1>Primary beneficiary</h1>
+          <p class="sub">Select who you would most likely want listed first.</p>
 
-    <div class="mobile-header">
+          <div class="options">
+            <label class="choice">
+              <input type="radio" name="primary_beneficiary" value="Spouse or partner" required>
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Spouse / Partner</strong>
+                <small>Common for household or income protection.</small>
+              </span>
+            </label>
 
-    <div class="mobile-title">
-        Complimentary Life Insurance Review
-    </div>
+            <label class="choice">
+              <input type="radio" name="primary_beneficiary" value="Children">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Children</strong>
+                <small>Protection for children or dependents.</small>
+              </span>
+            </label>
 
-    <div class="mobile-subtitle">
-        Licensed Independent Guidance
-    </div>
+            <label class="choice">
+              <input type="radio" name="primary_beneficiary" value="Parent or family member">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Parent / Family Member</strong>
+                <small>Another family member would be listed.</small>
+              </span>
+            </label>
 
-    <div class="mobile-trust">
+            <label class="choice">
+              <input type="radio" name="primary_beneficiary" value="Estate or trust">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Estate / Trust</strong>
+                <small>Estate planning or trust-related beneficiary.</small>
+              </span>
+            </label>
 
-        <div>✓ No Cost Review</div>
+            <label class="choice">
+              <input type="radio" name="primary_beneficiary" value="Not sure yet">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Not sure yet</strong>
+                <small>This can be reviewed during the call.</small>
+              </span>
+            </label>
+          </div>
 
-        <div>✓ No Obligation</div>
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
+          </div>
+        </section>
 
-        <div>✓ Information Never Sold</div>
+        <section class="step" data-step="3">
+          <h1>Current coverage</h1>
+          <p class="sub">Select the closest answer.</p>
 
-    </div>
+          <div class="options">
+            <label class="choice">
+              <input type="radio" name="current_coverage" value="Yes - personal policy" required>
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Yes</strong>
+                <small>I have a personal life insurance policy.</small>
+              </span>
+            </label>
 
-</div>
+            <label class="choice">
+              <input type="radio" name="current_coverage" value="Work coverage only">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Through work only</strong>
+                <small>My coverage is through my employer.</small>
+              </span>
+            </label>
 
-        <div class="progress-meta">
-         <span id="stepLabel">Step 1 of 2</span>
-<span>Complimentary Review</span>
-        </div>
+            <label class="choice">
+              <input type="radio" name="current_coverage" value="No current coverage">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>No</strong>
+                <small>I do not currently have coverage.</small>
+              </span>
+            </label>
 
-        <div class="progress">
-          <div class="bar" id="bar"></div>
-        </div>
+            <label class="choice">
+              <input type="radio" name="current_coverage" value="Not sure">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Not sure</strong>
+                <small>I would like help reviewing this.</small>
+              </span>
+            </label>
+          </div>
 
-        <form action="https://formspree.io/f/mojzwenr" method="POST" id="reviewForm">
-          <input type="hidden" name="source" value="VFIS Life Insurance Landing Page" />
-          <input type="hidden" name="utm_source" id="utm_source" />
-          <input type="hidden" name="utm_campaign" id="utm_campaign" />
-          <input type="hidden" name="utm_content" id="utm_content" />
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
+          </div>
+        </section>
 
-        <div class="step active" data-step="1">
+        <section class="step" data-step="4">
+          <h1>Contact information</h1>
+          <p class="sub">Enter your information to complete the coverage intake.</p>
 
-    <div class="eyebrow">
-        START YOUR QUICK REVIEW
-    </div>
-
-    <h2>What would you like to accomplish today?</h2>
-
-    <p class="lead">
-        Choose the option that best matches what you'd like help with today.
-    </p>
-
-    <div class="option-list">
-
-        <label class="choice">
-            <input
-                type="radio"
-                name="review_goal"
-                value="Protect the People I Care About"
-                required
-            >
-            <strong>Protect the People I Care About</strong>
-            <span>
-                Review life insurance options designed to help protect the people I Care About.
-            </span>
-        </label>
-
-        <label class="choice">
-            <input
-                type="radio"
-                name="review_goal"
-                value="Protect my home or mortgage"
-            >
-            <strong>Protect my home or mortgage</strong>
-            <span>
-                Explore coverage that may help protect my home and loved ones if something happens to me.
-            </span>
-        </label>
-
-
-        <label class="choice">
-            <input
-                type="radio"
-                name="review_goal"
-                value="Grow and protect my family's future"
-            >
-            <strong>Plan for my financial future</strong>
-            <span>
-                Learn about life insurance strategies designed to provide protection today and financial opportunities for tomorrow.
-            </span>
-        </label>
-
-        <label class="choice">
-            <input
-                type="radio"
-                name="review_goal"
-                value="Review my current life insurance"
-            >
-            <strong>Review my current life insurance</strong>
-            <span>
-                I already have coverage and want to make sure it still fits my goals and budget.
-            </span>
-        </label>
-
-        <label class="choice">
-            <input
-                type="radio"
-                name="review_goal"
-                value="Learn about living benefits"
-            >
-            <strong>Learn about living benefits</strong>
-            <span>
-                Understand options that may provide benefits during a qualifying illness or injury while living.
-            </span>
-        </label>
-
-        <label class="choice">
-            <input
-                type="radio"
-                name="review_goal"
-                value="Not sure"
-            >
-            <strong>I'm not sure and would like guidance</strong>
-            <span>
-                I'd like to speak with a licensed independent agent to better understand my options.
-            </span>
-        </label>
-
-    </div>
-
-    <div class="actions">
-        <button
-            type="button"
-            class="btn btn-primary"
-            onclick="nextStep()"
-        >
-            Continue →
-        </button>
-    </div>
-
-</div>
-        
-
-     <div class="step" data-step="2">
-            <div class="eyebrow">COMPLETE YOUR REVIEW</div>
-
-            <h2>Where should we reach you?</h2>
-
-            <p class="lead">
-              A licensed representative may contact you by call, text, or email regarding your requested review.
-            </p>
-
-       
-            <div class="fields">
-              <div class="field">
-                <label for="first">First Name</label>
-                <input id="first" name="first" type="text" autocomplete="given-name" required>
-              </div>
-
-              <div class="field">
-                <label for="last">Last Name</label>
-                <input id="last" name="last" type="text" autocomplete="family-name" required>
-              </div>
-
-              <div class="split">
-                <div class="field">
-                  <label for="phone">Phone number</label>
-                  <input id="phone" name="phone" type="tel" autocomplete="tel">
-                </div>
-
-                <div class="field">
-                  <label for="email">Email address</label>
-                  <input id="email" name="email" type="email" autocomplete="email">
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="state">State</label>
-                <select id="state" name="state" required>
-                  <option value="">Select your state</option>
-                  <option>North Carolina</option>
-                  <option>California</option>
-                  <option>Washington</option>
-                  <option>Pennsylvania</option>
-                  <option>Georgia</option>
-                  <option>Texas</option>
-                  <option>Other</option>
-                </select>
-              </div>
+          <div class="fields">
+            <div class="field">
+              <label for="first">First Name</label>
+              <input id="first" name="first" type="text" autocomplete="given-name" required>
             </div>
 
-            <div class="quote" style="margin-top:22px;">
+            <div class="field">
+              <label for="last">Last Name</label>
+              <input id="last" name="last" type="text" autocomplete="family-name" required>
+            </div>
 
-★★★★★
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
 
-<br><br>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" autocomplete="email">
+            </div>
 
-<em>
-
-"I wasn't looking for someone to just sell me a policy. Victor explained my options in plain English and helped me find coverage that actually fit my goals."
-
-</em>
-
-<br><br>
-
-<strong>Rich</strong>
-
-<br>
-
-<small>IUL Client</small>
-
-</div>
-
-<div class="notice" style="margin-top:18px;">
-
-✓ Licensed Independent Agent
-
-<br><br>
-
-✓ No Cost Review
-
-<br><br>
-
-✓ No Obligation
-
-<br><br>
-
-✓ Information Never Sold
-
-</div>
-
-            <p class="disclaimer">
-              By submitting, you agree that Victor Franchetti Insurance Services may contact you by phone, text, or email regarding your requested insurance review.
-              Message/data rates may apply. Your information will never be sold.
-            </p>
-
-            <div class="actions">
-              <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
-              <button type="submit" class="btn btn-gold">Submit</button>
+            <div class="field">
+              <label for="state">State</label>
+              <select id="state" name="state" required>
+                <option value="">Select your state</option>
+                <option>North Carolina</option>
+                <option>California</option>
+                <option>Washington</option>
+                <option>Pennsylvania</option>
+                <option>Georgia</option>
+                <option>Texas</option>
+                <option>Other</option>
+              </select>
             </div>
           </div>
-        </form>
-      </section>
+
+          <div class="mini-note">
+            By submitting, you authorize Victor Franchetti Insurance Services to contact you regarding this coverage intake. This is not an application for insurance.
+          </div>
+
+          <div class="trust-line">
+            <div><span class="check">✓</span><span>Licensed independent life insurance guidance</span></div>
+            <div><span class="check">✓</span><span>Information used only for this review</span></div>
+            <div><span class="check">✓</span><span>No obligation to apply</span></div>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </section>
+      </form>
+
+      <div class="footer">
+        Coverage availability depends on age, health, state, carrier, and underwriting. Submitting this intake does not guarantee approval or coverage.
+      </div>
 
     </div>
   </main>
 
   <script>
     let currentStep = 1;
+    const totalSteps = 4;
 
     const steps = [...document.querySelectorAll('.step')];
-    const bar = document.getElementById('bar');
+    const dots = [...document.querySelectorAll('.dot')];
     const stepLabel = document.getElementById('stepLabel');
-    const reviewForm = document.getElementById('reviewForm');
-    const formPanel = document.getElementById('formPanel');
-    const heroArea = document.getElementById('heroArea');
-    const reviewGoalHidden = document.getElementById('review_goal');
+    const form = document.getElementById('assessmentForm');
+    const errorBox = document.getElementById('errorBox');
 
     function trackClarityEvent(eventName, customData = {}) {
       if (typeof clarity === "function") {
         clarity("event", eventName);
-
         Object.entries(customData).forEach(([key, value]) => {
           if (value) clarity("set", key, value);
         });
       }
     }
 
-    function isMobile() {
-      return window.matchMedia("(max-width: 900px)").matches;
+    function hideError(){
+      if (errorBox) errorBox.classList.remove('show');
     }
 
-    function startReview(event) {
-      if (event) event.stopPropagation();
-
-      trackClarityEvent('Hero CTA Clicked', {
-        funnel_step: 'start'
-      });
-
-      formPanel.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    function showError(message){
+      if (!errorBox) return;
+      errorBox.textContent = message || 'Please complete this step to continue.';
+      errorBox.classList.add('show');
     }
 
-    if (heroArea) {
-      heroArea.addEventListener('click', function () {
-        startReview();
-      });
-    }
-
-    function showStep(n) {
+    function showStep(n){
       currentStep = n;
+      hideError();
 
-      steps.forEach(s =>
-        s.classList.toggle('active', Number(s.dataset.step) === n)
-      );
-
-    bar.style.width = (n / 2 * 100) + '%';
-stepLabel.textContent = 'Step ' + n + ' of 2';
-
-      trackClarityEvent('Reached Step ' + n, {
-        funnel_step: String(n)
+      steps.forEach(step => {
+        step.classList.toggle('active', Number(step.dataset.step) === n);
       });
 
-      if (isMobile()) {
-        formPanel.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      } else {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
+      dots.forEach(dot => {
+        dot.classList.toggle('active', Number(dot.dataset.dot) === n);
+      });
+
+      stepLabel.textContent = n < totalSteps ? 'Question ' + n + ' of ' + totalSteps : 'Final Step';
+
+      trackClarityEvent('Reached Coverage Amount Intake Step ' + n, {
+        intake_step: String(n)
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function nextStep() {
+    function validateStep(){
       const active = document.querySelector('.step.active');
       const required = [...active.querySelectorAll('[required]')];
 
       for (const field of required) {
         if (!field.checkValidity()) {
-          field.reportValidity();
-          return;
-        }
-      }
-
-      if (currentStep === 1) {
-        const selected = document.querySelector('input[name="protection_reason"]:checked');
-
-        if (selected) {
-          if (reviewGoalHidden) {
-            reviewGoalHidden.value = selected.value;
+          if (field.type === 'radio') {
+            showError('Please select an option to continue.');
+          } else {
+            showError('Please complete the required fields.');
+            field.reportValidity();
           }
-
-          trackClarityEvent('Protection Reason Selected', {
-            protection_reason: selected.value
-          });
+          return false;
         }
       }
 
-      if (currentStep < 2) {
-    showStep(currentStep + 1);
-}
+      return true;
     }
 
-    function prevStep() {
+    function nextStep(){
+      if (!validateStep()) return;
+
+      const active = document.querySelector('.step.active');
+      const selected = active.querySelector('input[type="radio"]:checked');
+
+      if (selected) {
+        trackClarityEvent('Coverage Amount Intake Answer', {
+          question_name: selected.name,
+          answer_value: selected.value,
+          intake_step: String(currentStep)
+        });
+      }
+
+      if (currentStep < totalSteps) {
+        showStep(currentStep + 1);
+      }
+    }
+
+    function prevStep(){
       if (currentStep > 1) {
         showStep(currentStep - 1);
       }
     }
 
-    document.querySelectorAll('input[name="protection_reason"]').forEach(function (el) {
-      el.addEventListener('change', function () {
-        if (reviewGoalHidden) {
-          reviewGoalHidden.value = this.value;
-        }
+    document.querySelectorAll('input[type="radio"]').forEach(input => {
+      input.addEventListener('change', function () {
+        hideError();
 
-        trackClarityEvent('Protection Reason Selected', {
-          protection_reason: this.value
+        trackClarityEvent('Coverage Amount Intake Option Clicked', {
+          question_name: this.name,
+          answer_value: this.value,
+          intake_step: String(currentStep)
         });
       });
     });
 
-    if (reviewForm) {
-      reviewForm.addEventListener('submit', function (e) {
-        const phone = document.getElementById('phone').value.trim();
-        const email = document.getElementById('email').value.trim();
-
-        if (!phone && !email) {
-          e.preventDefault();
-
-          alert(
-            "Please provide either a phone number or an email address so we can contact you about your complimentary review."
-          );
-
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        if (!validateStep()) {
+          event.preventDefault();
           return;
         }
 
-        trackClarityEvent('Submitted Review', {
-          funnel_step: 'submitted'
+        trackClarityEvent('Submitted Coverage Amount Intake', {
+          intake_step: 'submitted'
         });
       });
     }
 
     const params = new URLSearchParams(window.location.search);
-
-    ['utm_source', 'utm_campaign', 'utm_content'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.value = params.get(id) || '';
+    ['utm_source', 'utm_campaign', 'utm_content', 'utm_medium', 'utm_id', 'utm_term'].forEach(id => {
+      const field = document.getElementById(id);
+      if (field) field.value = params.get(id) || '';
     });
 
-    trackClarityEvent('Landing Page Loaded', {
-      page_type: 'life_review'
+    trackClarityEvent('Coverage Amount Intake Loaded', {
+      page_type: 'coverage_amount_intake'
     });
   </script>
 </body>
