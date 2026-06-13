@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Coverage Assessment | Victor Franchetti Insurance Services</title>
-  <meta name="description" content="Complete a brief coverage assessment with Victor Franchetti Insurance Services." />
+  <title>Mortgage Protection Review | Victor Franchetti Insurance Services</title>
+  <meta name="description" content="Complete a brief mortgage protection review with Victor Franchetti Insurance Services." />
 
   <style>
     :root{
       --bg:#ffffff;
       --ink:#101828;
-      --text:#1f2937;
       --muted:#667085;
       --quiet:#98a2b3;
       --line:#e5e7eb;
@@ -35,9 +34,7 @@
       -webkit-font-smoothing:antialiased;
     }
 
-    body{
-      overflow-x:hidden;
-    }
+    body{overflow-x:hidden}
 
     .page{
       min-height:100vh;
@@ -131,9 +128,7 @@
       background:var(--blue);
     }
 
-    form{
-      width:100%;
-    }
+    form{width:100%}
 
     .error{
       display:none;
@@ -148,18 +143,14 @@
       line-height:1.35;
     }
 
-    .error.show{
-      display:block;
-    }
+    .error.show{display:block}
 
     .step{
       display:none;
       animation:fade .14s ease;
     }
 
-    .step.active{
-      display:block;
-    }
+    .step.active{display:block}
 
     @keyframes fade{
       from{opacity:.42; transform:translateY(4px)}
@@ -223,10 +214,7 @@
       transition:.14s ease;
     }
 
-    .choice-text{
-      display:block;
-      min-width:0;
-    }
+    .choice-text{display:block;min-width:0}
 
     .choice strong{
       display:block;
@@ -349,9 +337,7 @@
       color:#fff;
     }
 
-    .btn-primary:hover{
-      background:var(--blue2);
-    }
+    .btn-primary:hover{background:var(--blue2)}
 
     .btn-secondary{
       flex:0 0 auto;
@@ -360,9 +346,7 @@
       border:1px solid var(--line);
     }
 
-    .btn-secondary:hover{
-      background:#f8fafc;
-    }
+    .btn-secondary:hover{background:#f8fafc}
 
     .footer{
       margin-top:18px;
@@ -388,9 +372,7 @@
         padding:24px;
       }
 
-      h1{
-        font-size:35px;
-      }
+      h1{font-size:35px}
 
       .actions{
         position:static;
@@ -413,7 +395,7 @@
   <script>
     window.addEventListener('load', function () {
       if (typeof clarity === "function") {
-        clarity("set", "page_type", "coverage_amount_intake");
+        clarity("set", "page_type", "mortgage_protection_intake_v2");
       }
     });
   </script>
@@ -425,13 +407,13 @@
 
       <header class="top">
         <div class="agency">
-          Victor Franchetti Insurance Services
-          <span>Independent Life Insurance</span>
+          Mortgage Protection Review
+          <span>Victor Franchetti Insurance Services</span>
         </div>
 
         <div class="badge">
           <span class="badge-dot"></span>
-          Intake
+          Licensed Review
         </div>
       </header>
 
@@ -446,7 +428,7 @@
       </div>
 
       <form action="https://formspree.io/f/mojzwenr" method="POST" id="assessmentForm">
-        <input type="hidden" name="source" value="VFIS Coverage Amount Intake" />
+        <input type="hidden" name="source" value="VFIS Mortgage Protection Intake V2" />
         <input type="hidden" name="utm_source" id="utm_source" />
         <input type="hidden" name="utm_campaign" id="utm_campaign" />
         <input type="hidden" name="utm_content" id="utm_content" />
@@ -457,52 +439,43 @@
         <div class="error" id="errorBox">Please select an option to continue.</div>
 
         <section class="step active" data-step="1">
-          <h1>Coverage amount</h1>
-          <p class="sub">Select the amount of coverage you would like included in your review.</p>
+          <h1>What are you trying to protect?</h1>
+          <p class="sub">Choose the answer that best fits why you clicked.</p>
 
           <div class="options">
             <label class="choice">
-              <input type="radio" name="coverage_amount" value="$25,000 - $50,000" required>
+              <input type="radio" name="protection_goal" value="My family" required>
               <span class="radio"></span>
               <span class="choice-text">
-                <strong>$25,000 - $50,000</strong>
-                <small>Starter or final expense protection.</small>
+                <strong>My family</strong>
+                <small>I want to make sure the people who depend on me are protected.</small>
               </span>
             </label>
 
             <label class="choice">
-              <input type="radio" name="coverage_amount" value="$50,000 - $100,000">
+              <input type="radio" name="protection_goal" value="My home">
               <span class="radio"></span>
               <span class="choice-text">
-                <strong>$50,000 - $100,000</strong>
-                <small>Common family protection amount.</small>
+                <strong>My home</strong>
+                <small>I want to review options that may help protect the mortgage.</small>
               </span>
             </label>
 
             <label class="choice">
-              <input type="radio" name="coverage_amount" value="$100,000 - $250,000">
+              <input type="radio" name="protection_goal" value="Both family and home">
               <span class="radio"></span>
               <span class="choice-text">
-                <strong>$100,000 - $250,000</strong>
-                <small>Family or mortgage protection.</small>
+                <strong>Both my family and home</strong>
+                <small>I want protection that accounts for my loved ones and mortgage.</small>
               </span>
             </label>
 
             <label class="choice">
-              <input type="radio" name="coverage_amount" value="$250,000+">
+              <input type="radio" name="protection_goal" value="Not sure">
               <span class="radio"></span>
               <span class="choice-text">
-                <strong>$250,000+</strong>
-                <small>Larger protection or long-term planning.</small>
-              </span>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="coverage_amount" value="Not sure">
-              <span class="radio"></span>
-              <span class="choice-text">
-                <strong>Not sure</strong>
-                <small>A licensed review can help determine an appropriate amount.</small>
+                <strong>I'm not sure yet</strong>
+                <small>I need help understanding what may make sense.</small>
               </span>
             </label>
           </div>
@@ -513,65 +486,8 @@
         </section>
 
         <section class="step" data-step="2">
-          <h1>Primary beneficiary</h1>
-          <p class="sub">Select who you would most likely want listed first.</p>
-
-          <div class="options">
-            <label class="choice">
-              <input type="radio" name="primary_beneficiary" value="Spouse or partner" required>
-              <span class="radio"></span>
-              <span class="choice-text">
-                <strong>Spouse / Partner</strong>
-                <small>Common for household or income protection.</small>
-              </span>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="primary_beneficiary" value="Children">
-              <span class="radio"></span>
-              <span class="choice-text">
-                <strong>Children</strong>
-                <small>Protection for children or dependents.</small>
-              </span>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="primary_beneficiary" value="Parent or family member">
-              <span class="radio"></span>
-              <span class="choice-text">
-                <strong>Parent / Family Member</strong>
-                <small>Another family member would be listed.</small>
-              </span>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="primary_beneficiary" value="Estate or trust">
-              <span class="radio"></span>
-              <span class="choice-text">
-                <strong>Estate / Trust</strong>
-                <small>Estate planning or trust-related beneficiary.</small>
-              </span>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="primary_beneficiary" value="Not sure yet">
-              <span class="radio"></span>
-              <span class="choice-text">
-                <strong>Not sure yet</strong>
-                <small>This can be reviewed during the call.</small>
-              </span>
-            </label>
-          </div>
-
-          <div class="actions">
-            <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
-            <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
-          </div>
-        </section>
-
-        <section class="step" data-step="3">
-          <h1>Current coverage</h1>
-          <p class="sub">Select the closest answer.</p>
+          <h1>Do you currently have life insurance?</h1>
+          <p class="sub">Select the closest answer. This helps guide the review.</p>
 
           <div class="options">
             <label class="choice">
@@ -617,9 +533,66 @@
           </div>
         </section>
 
+        <section class="step" data-step="3">
+          <h1>About how much do you still owe on the home?</h1>
+          <p class="sub">A rough estimate is fine. You can also choose “prefer to discuss.”</p>
+
+          <div class="options">
+            <label class="choice">
+              <input type="radio" name="mortgage_balance" value="Under $100,000" required>
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Under $100,000</strong>
+                <small>Lower remaining mortgage balance.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="mortgage_balance" value="$100,000 - $250,000">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$100,000 - $250,000</strong>
+                <small>Common remaining mortgage range.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="mortgage_balance" value="$250,000 - $500,000">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$250,000 - $500,000</strong>
+                <small>Larger mortgage protection need.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="mortgage_balance" value="$500,000+">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>$500,000+</strong>
+                <small>Higher mortgage balance or broader planning need.</small>
+              </span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="mortgage_balance" value="Prefer to discuss">
+              <span class="radio"></span>
+              <span class="choice-text">
+                <strong>Prefer to discuss</strong>
+                <small>A licensed review can help determine what amount may fit.</small>
+              </span>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="btn btn-primary" onclick="nextStep()">Continue</button>
+          </div>
+        </section>
+
         <section class="step" data-step="4">
           <h1>Contact information</h1>
-          <p class="sub">Enter your information to complete the coverage intake.</p>
+          <p class="sub">Enter your information so a licensed representative can contact you about your mortgage protection review.</p>
 
           <div class="fields">
             <div class="field">
@@ -647,18 +620,17 @@
               <select id="state" name="state" required>
                 <option value="">Select your state</option>
                 <option>North Carolina</option>
+                <option>Georgia</option>
+                <option>Pennsylvania</option>
                 <option>California</option>
                 <option>Washington</option>
-                <option>Pennsylvania</option>
-                <option>Georgia</option>
                 <option>Texas</option>
-                <option>Other</option>
               </select>
             </div>
           </div>
 
           <div class="mini-note">
-            By submitting, you authorize Victor Franchetti Insurance Services to contact you regarding this coverage intake. This is not an application for insurance.
+            By submitting, you authorize Victor Franchetti Insurance Services to contact you regarding this mortgage protection review. This is not an application for insurance.
           </div>
 
           <div class="trust-line">
@@ -669,13 +641,13 @@
 
           <div class="actions">
             <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit Review Request</button>
           </div>
         </section>
       </form>
 
       <div class="footer">
-        Coverage availability depends on age, health, state, carrier, and underwriting. Submitting this intake does not guarantee approval or coverage.
+        Coverage availability depends on age, health, state, carrier, and underwriting. Submitting this review request does not guarantee approval or coverage.
       </div>
 
     </div>
@@ -690,6 +662,8 @@
     const stepLabel = document.getElementById('stepLabel');
     const form = document.getElementById('assessmentForm');
     const errorBox = document.getElementById('errorBox');
+
+    let autoAdvanceTimer = null;
 
     function trackClarityEvent(eventName, customData = {}) {
       if (typeof clarity === "function") {
@@ -724,7 +698,7 @@
 
       stepLabel.textContent = n < totalSteps ? 'Question ' + n + ' of ' + totalSteps : 'Final Step';
 
-      trackClarityEvent('Reached Coverage Amount Intake Step ' + n, {
+      trackClarityEvent('Reached Mortgage Protection Intake Step ' + n, {
         intake_step: String(n)
       });
 
@@ -750,19 +724,23 @@
       return true;
     }
 
-    function nextStep(){
-      if (!validateStep()) return;
-
+    function trackCurrentAnswer(){
       const active = document.querySelector('.step.active');
       const selected = active.querySelector('input[type="radio"]:checked');
 
       if (selected) {
-        trackClarityEvent('Coverage Amount Intake Answer', {
+        trackClarityEvent('Mortgage Protection Intake Answer', {
           question_name: selected.name,
           answer_value: selected.value,
           intake_step: String(currentStep)
         });
       }
+    }
+
+    function nextStep(){
+      if (!validateStep()) return;
+
+      trackCurrentAnswer();
 
       if (currentStep < totalSteps) {
         showStep(currentStep + 1);
@@ -770,6 +748,8 @@
     }
 
     function prevStep(){
+      if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
+
       if (currentStep > 1) {
         showStep(currentStep - 1);
       }
@@ -779,11 +759,19 @@
       input.addEventListener('change', function () {
         hideError();
 
-        trackClarityEvent('Coverage Amount Intake Option Clicked', {
+        trackClarityEvent('Mortgage Protection Intake Option Clicked', {
           question_name: this.name,
           answer_value: this.value,
           intake_step: String(currentStep)
         });
+
+        if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
+
+        autoAdvanceTimer = setTimeout(() => {
+          if (currentStep < totalSteps) {
+            nextStep();
+          }
+        }, 350);
       });
     });
 
@@ -794,7 +782,7 @@
           return;
         }
 
-        trackClarityEvent('Submitted Coverage Amount Intake', {
+        trackClarityEvent('Submitted Mortgage Protection Intake', {
           intake_step: 'submitted'
         });
       });
@@ -806,8 +794,8 @@
       if (field) field.value = params.get(id) || '';
     });
 
-    trackClarityEvent('Coverage Amount Intake Loaded', {
-      page_type: 'coverage_amount_intake'
+    trackClarityEvent('Mortgage Protection Intake Loaded', {
+      page_type: 'mortgage_protection_intake_v2'
     });
   </script>
 </body>
